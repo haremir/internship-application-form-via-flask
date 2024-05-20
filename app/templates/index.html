@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="{{ url_for('static', filename='logo.png') }}" alt="logo">
+        </div>
+
+        <form action="/submit" method="post">
+            <div class="title">Erzurum Teknik Üniversitesi</div>
+
+            <div class="input-box">
+                <input type="email" name="email" placeholder="Email giriniz" required>
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-box">
+                <input type="password" name="password" placeholder="Şifrenizi giriniz" required>
+                <div class="underline"></div>
+            </div>
+
+            <div class="input-box">
+                <input type="submit" value="GİRİŞ YAP">
+            </div>
+        </form>
+
+        <div class="text">turkiye.gov.tr hesabınız ile de sisteme giriş yapabilirsiniz.</div>
+        <div class="edevlet">
+            <a href="https://giris.turkiye.gov.tr/Giris/gir">e-Devlet ile giriş yap</a>
+        </div>
+    </div>
+</body>
+</html>
